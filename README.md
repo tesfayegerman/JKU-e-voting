@@ -29,6 +29,7 @@ Software Engineering Course
 Group 2 – E-Voting System
 
 ✍️ Author
+
 Tesfaye German Regassa  
-Computer Science (Regular) & Management (Weekend)  
+Computer Science 
 Jinka University
