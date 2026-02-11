@@ -1,0 +1,263 @@
+:root{
+  --bg:#f6f9fc;
+  --card:#ffffff;
+  --accent:#2b7be4;
+  --muted:#667085;
+  --success:#16a34a;
+  --danger:#ef4444;
+  --glass: rgba(255,255,255,0.6);
+}
+
+/* ============ RESET ============ */
+*{
+  box-sizing:border-box;
+}
+
+/* ============ BODY ============ */
+body{
+  font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  margin:0;
+  background:linear-gradient(180deg,#eef6ff 0%, #f6fbff 100%);
+  color:#0f172a;
+}
+
+/* ============ HEADER ============ */
+header{
+  background:linear-gradient(90deg,var(--accent),#1e90ff);
+  color:#fff;
+  padding:14px 20px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;
+  top:0;
+  z-index:50;
+  box-shadow:0 4px 14px rgba(18,52,86,0.08);
+}
+
+header h1{
+  font-size:18px;
+  margin:0;
+  letter-spacing:0.2px;
+}
+
+/* ============ NAVIGATION LINKS ============ */
+nav a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:12px;
+  padding:8px;
+  border-radius:6px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+nav a:hover{
+  color:#fff;
+  background: rgba(255,255,255,0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255,255,255,0.2);
+}
+
+/* Animated underline */
+nav a::after{
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: #fff;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after{
+  width: 100%;
+}
+
+/* Active page highlight */
+nav a.active{
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 4px 14px rgba(255,255,255,0.25);
+}
+
+/* ============ MAIN ============ */
+main{
+  max-width:980px;
+  margin:28px auto;
+  padding:18px;
+}
+
+/* ============ CARD ============ */
+.card{
+  background:var(--card);
+  border-radius:12px;
+  padding:28px;
+  margin-bottom:28px;
+  box-shadow:0 8px 28px rgba(12,22,52,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 14px 36px rgba(12,22,52,0.12);
+}
+
+/* ============ GRID ============ */
+.grid{
+  display:grid;
+  gap:12px;
+}
+
+.grid.cols-2{
+  grid-template-columns:1fr 1fr;
+}
+
+/* ============ BUTTONS ============ */
+.btn{
+  background:var(--accent);
+  color:#fff;
+  padding:10px 14px;
+  border-radius:8px;
+  border:none;
+  cursor:pointer;
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.btn:hover{
+  background:#1e6fe0;
+  transform:translateY(-2px);
+  box-shadow:0 8px 18px rgba(43,123,228,0.35);
+}
+
+/* Click Effect */
+.btn:active{
+  transform:translateY(0);
+  box-shadow:0 4px 10px rgba(43,123,228,0.2);
+}
+
+/* Secondary Button */
+.btn.secondary{
+  background:#e6eefc;
+  color:var(--accent);
+  border:1px solid rgba(43,123,228,0.12);
+}
+
+.btn.secondary:hover{
+  background:#dbe7ff;
+  border-color:#2b7be4;
+}
+
+/* Danger Button */
+.btn.warn{
+  background:var(--danger);
+}
+
+.btn.warn:hover{
+  background:#dc2626;
+  box-shadow:0 6px 16px rgba(239,68,68,0.45);
+}
+
+/* ============ TEXT STYLES ============ */
+.muted{color:var(--muted);font-size:14px;}
+.small{font-size:13px;color:var(--muted);}
+.large{font-size:20px;}
+.center{text-align:center;}
+.right{margin-left:auto;}
+.success{color:var(--success);}
+.danger{color:var(--danger);}
+
+/* ============ CAROUSEL ============ */
+.carousel{
+  position:relative;
+  border-radius:10px;
+  overflow:hidden;
+  height:220px;
+}
+
+.carousel img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  display:block;
+}
+
+.carousel .caption{
+  position:absolute;
+  left:18px;
+  bottom:12px;
+  color:#fff;
+  background:rgba(0,0,0,0.35);
+  padding:8px 12px;
+  border-radius:8px;
+}
+
+/* ============ FORMS ============ */
+form input,
+form select,
+form textarea{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #e6eef5;
+  margin-top:8px;
+}
+
+label{
+  font-weight:600;
+  font-size:14px;
+}
+
+/* ============ TABLE ============ */
+.table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.table th,
+.table td{
+  padding:8px;
+  text-align:left;
+  border-bottom:1px solid #f1f5f9;
+}
+
+/* ============ CANDIDATE CARD ============ */
+.candidate{
+  border-left:4px solid var(--accent);
+  padding:10px;
+  border-radius:8px;
+  background:linear-gradient(180deg,#fbfdff,#ffffff);
+  display:flex;
+  gap:12px;
+  align-items:center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.candidate:hover{
+  transform:scale(1.02);
+  box-shadow:0 10px 22px rgba(0,0,0,0.08);
+}
+
+/* ============ UTILITY ============ */
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;}
+.controls{display:flex;gap:8px;align-items:center;}
+.hidden{display:none;}
+.navlinks{display:flex;gap:8px;flex-wrap:wrap;}
+
+/* ============ FOOTER ============ */
+footer{
+  max-width:980px;
+  margin:18px auto;
+  text-align:center;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* ============ MOBILE RESPONSIVE ============ */
+@media (max-width:720px){
+  .grid.cols-2{grid-template-columns:1fr;}
+  header{padding:12px;}
+}
